@@ -1,0 +1,17 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input, textarea, select, button {
+  display: block;
+  margin: 10px 0;
+}
