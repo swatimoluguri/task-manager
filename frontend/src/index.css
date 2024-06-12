@@ -1,17 +1,172 @@
-
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
   font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: auto;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2em;
+  color: #444;
 }
 
 form {
-  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
 }
 
-input, textarea, select, button {
-  display: block;
-  margin: 10px 0;
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+textarea {
+  height: 150px;
+}
+
+form button {
+  width: 150px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.task-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.task-item h3 {
+  margin: 0 0 10px;
+  overflow-wrap: break-word;
+  font-size: 1.2em;
+}
+
+.task-item p {
+  margin: 0 0 5px;
+  overflow-wrap: break-word;
+  color: #555;
+}
+
+.task-item .actions {
+  margin-top: 10px;
+}
+
+.task-item .actions button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.task-item .actions .edit {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.task-item .actions .edit:hover {
+  background-color: #e0a800;
+}
+
+.task-item .actions .delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.task-item .actions .delete:hover {
+  background-color: #c82333;
+}
+.main {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+.taskform {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+.tasklist {
+  width: 40%;
+  overflow-y: scroll;
+  height: 90vh;
+}
+input {
+  width: 100%;
+}
+.ToDo{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffdee1
+}
+.InProgress{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fef3d3
+}
+
+.Done{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #d6ffe4
+}
+.edit{
+  background-color: #e0a800;
+}
+.edit:hover {
+  background-color: #a97e00;
+}
+
+.allButton{
+  background-color: #d1d1d1;
+}
+.todoButton{
+  background-color: #ffdee1;
+}
+.inProgressButton{
+  background-color: #fef3d3;
+}
+.doneButton{
+  background-color: #d6ffe4;
+}
+.filter-buttons button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background-color: #000000;
+  color: #fff;
 }
