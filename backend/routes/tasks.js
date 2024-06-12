@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const Task = require('../models/Task');
+const { ObjectId } = require("mongodb");
 
 // Get all tasks
 router.get('/', async (req, res) => {
@@ -47,12 +48,9 @@ router.put('/:id', async (req, res) => {
 
 // Delete a task
 router.delete('/:id', async (req, res) => {
+    const taskId = new ObjectId(req.params.id);
     try {
-        const task = await Task.findById(req.params.id);
-        if (!task) {
-            return res.status(404).json({ message: 'Task not found' });
-        }
-        await task.remove();
+        await Task.findOneAndDelete({'_id':taskId});
         res.json({ message: 'Task deleted' });
     } catch (err) {
         res.status(500).json({ message: err.message });

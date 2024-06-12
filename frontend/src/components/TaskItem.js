@@ -1,4 +1,3 @@
-// frontend/src/components/TaskItem.js
 import React from 'react';
 import axios from 'axios';
 
@@ -9,12 +8,14 @@ const TaskItem = ({ task, fetchTasks, setEditTask }) => {
     };
 
     return (
-        <div>
+        <div className={task.status.split(" ").join("")}>
             <h3>{task.title}</h3>
             <p>{task.description}</p>
             <p>Status: {task.status}</p>
-            <button onClick={() => setEditTask(task)}>Edit</button>
-            <button onClick={deleteTask}>Delete</button>
+            <div className="actions">
+                <button className="edit" onClick={() => setEditTask(task)}>Edit</button>
+                <button className="delete" onClick={deleteTask}>Delete</button>
+            </div>
         </div>
     );
 };
